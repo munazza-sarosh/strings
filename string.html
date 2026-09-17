@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>strings</title>
+</head>
+
+<body>
+    <button onclick="mystrings()">click me</button>
+    <p id="uppercase">Hello World!</p>
+
+    <button onclick="myString()">click me</button>
+    <p id="lowercase">MUNAZZA SAROSH</p>
+
+    <script>
+        function mystrings() {
+            let text = document.getElementById("uppercase").innerHTML;
+            document.getElementById("uppercase").innerHTML =
+                text.toUpperCase();
+        }
+
+        function myString() {
+            let text = document.getElementById("lowercase").innerHTML;
+            document.getElementById("lowercase").innerHTML = text.toLowerCase();
+        }
+
+       
+    </script>
+</body>
+
+</html>
