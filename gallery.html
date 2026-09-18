@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button type="button" onclick="previous()">previous</button>
+    <img src="" alt="" id="image" style="width: 500px; height: 500px;">
+    <button type="button" onclick="next()">next</button>
+
+    <script>
+        const images = ["coffeewallpaper.jpg", "coffee2.jpg", "latte.jpg","coffeewallpaper.jpg", "coffee2.jpg", "latte.jpg"];
+
+        let currentindex = 0;
+
+        function showimage() {
+            document.getElementById("image").src = images[currentindex];
+        }
+
+        function next() {
+            if (currentindex == images.length - 1) {
+                currentindex = 0;
+            }
+            else {
+                currentindex++;
+            }
+            showimage();
+        }
+
+        function previous() {
+            if (currentindex == 0) {
+                currentindex = images.length - 1;
+            }
+            else {
+                currentindex--;
+            }
+            showimage();
+        }
+        showimage();
+    </script>
+</body>
+
+</html>

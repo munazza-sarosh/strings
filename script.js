@@ -22,15 +22,15 @@ function nextImage() {
     showImage();
 }
 
-function previousImage() {
+function previousImage() { 
 
-    if (currentIndex == 0) {
-        currentIndex = images.length - 1;
+    if (currentIndex == 0) {   //0 == 0;
+        currentIndex = images.length; //- 1; 0 = 4 0 = 
     } else {
-        currentIndex--;
+        currentIndex--; // 0+1 = 1
     }
 
-    showImage();
+    showImage(); 
 }
 
 showImage();
