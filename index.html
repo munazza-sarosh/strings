@@ -5,12 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>image slider</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <img id="sliderImage" src="" alt="image">
-    <button type="button" onclick="nextimage()">nextimage</button>
-    <button type="button" onclick="previousimage()">previousimage</button>
+    <div class="slider">
+        <button type="button" onclick="previousImage()"><span>&lt</span></button>
+        <img id="sliderImage" src="" alt="image" style="width: 500px; height: 400px;">
+        <button type="button" onclick="nextImage()"><span>&gt</span></button>
+    </div>
     <script src="script.js"></script>
 </body>
 
