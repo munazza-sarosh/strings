@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>qoutes</title>
+</head>
+
+<body>
+    <button onclick="back()" type="button" id="previous">back</button>
+    <p id="quote">keep learning</p>
+    <button onclick="next()" type="button" id="next">next</button>
+    <script>
+        const quotes = [
+            "Keep learning",
+            "Never give up",
+            "Practice makes perfect",
+            "Believe in yourself"
+        ];
+        let currentindex = 0;
+        function showqoute(){
+            document.getElementById("quote") .innerHTML = quotes[currentindex];
+        }
+
+        function next(){
+            if (currentindex == quotes.length-1) {
+                currentindex = 0;
+            } else {
+                currentindex ++;
+            }
+            showqoute();
+        }
+        function back() {
+            if (currentindex == 0) {
+                currentindex = quotes.length-1;
+            } else {
+                currentindex--;
+            }
+            showqoute();
+        }
+        showqoute();
+    </script>
+</body>
+
+</html>

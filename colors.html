@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="previous()" type="button" id="previous">previous</button>
+    <h1 id="colours">red</h1>
+
+    <button onclick="next()" type="button" id="next">next</button>
+    <script>
+        const colours = ["red", "green", "blue", "purple", "pink"]
+
+        let index = 0;
+        function showcolour() {
+            document.body.style.color = colours[index];
+            document.getElementById("colours").innerHTML = colours[index];
+        }
+        function previous() {
+            if (index == 0) {
+                index = colours.length - 1;
+            } else {
+                index--;
+            }
+            showcolour();
+        }
+        function next() {
+            if (index == colours.length-1) {
+                index = 0;
+            } else {
+                index++;
+            }
+            showcolour();
+        }
+        showcolour();
+    </script>
+</body>
+
+</html>
